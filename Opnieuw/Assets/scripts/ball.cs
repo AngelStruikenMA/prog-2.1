@@ -8,13 +8,7 @@ public class BallSpawner : MonoBehaviour
     private void Start()
     {
        
-        for (int i = 0; i < 100; i++)
-        {
-            Color randColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f);
-            Vector3 randPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(1f, 10f), Random.Range(-10f, 10f));
-            GameObject ball = CreateBall(randColor, randPosition);
-            DestroyBall(ball);
-        }
+        
     }
 
     private void Update()
@@ -30,6 +24,16 @@ public class BallSpawner : MonoBehaviour
             DestroyBall(ball);
 
             elapsedTime = 0f;
+        }
+    }
+    private void rando()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            Color randColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f);
+            Vector3 randPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(1f, 10f), Random.Range(-10f, 10f));
+            GameObject ball = CreateBall(randColor, randPosition);
+            DestroyBall(ball);
         }
     }
 
